@@ -3,3 +3,6 @@
 *.sh text eol=lf
 *.npz binary
 *.pdf binary
+# raw results are stored byte for byte: their SHA-256 hashes are recorded in
+# the run manifests and checked by scripts/validate_outputs.py
+experiments/results/** -text
