@@ -1,0 +1,41 @@
+name: check
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned packages
+        run: |
+          pip install -q torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -r environment/requirements-colab.txt
+      - name: Unit tests
+        run: python -m pytest tests -q
+      - name: Public data checksums
+        run: python scripts/download_public_data.py
+      - name: Smoke run of every experiment
+        run: |
+          python experiments/run_all.py --config configs/smoke.json --jobs 2
+          python experiments/run_hardware.py --smoke --jobs 2
+          python experiments/run_extensions.py --config configs/extensions_smoke.json --jobs 2
+          python experiments/analyze.py --profile smoke
+          python experiments/analyze_extensions.py --profile smoke
+      - name: Tables and figures of the article from the stored results
+        run: |
+          python experiments/analyze.py --profile full
+          python experiments/analyze_extensions.py --profile full
+          python scripts/make_figures.py --profile full --png figures/png
+      - name: Validation
+        run: python scripts/validate_outputs.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: figures
+          path: figures/png

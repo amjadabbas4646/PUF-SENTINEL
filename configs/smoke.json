@@ -1,0 +1,210 @@
+{
+  "profile": "smoke",
+  "n_stages": 32,
+  "attack": {
+    "constructions": [
+      "apuf",
+      "xor2",
+      "mask_only",
+      "mask_apuf",
+      "mask_xor2"
+    ],
+    "devices": 2,
+    "budgets": [
+      500,
+      5000
+    ],
+    "n_test": 2000,
+    "val_fraction": 0.2,
+    "conditions": [
+      {
+        "dist": "uniform",
+        "noisiness": 0.0
+      },
+      {
+        "dist": "markov",
+        "noisiness": 0.0
+      },
+      {
+        "dist": "uniform",
+        "noisiness": 0.1
+      }
+    ],
+    "markov_rho": 0.7,
+    "attacks": [
+      "lr",
+      "svm",
+      "rf",
+      "gb",
+      "mlp",
+      "lr_xor"
+    ],
+    "equivalence_margin": 0.01
+  },
+  "legacy_pbkdf2": {
+    "devices": 2,
+    "budgets": [
+      500
+    ],
+    "n_test": 500,
+    "attacks": [
+      "lr",
+      "lr_xor"
+    ]
+  },
+  "xor_scaling": {
+    "k": [
+      1,
+      2,
+      3
+    ],
+    "devices": 2,
+    "budgets": [
+      5000
+    ],
+    "n_test": 2000,
+    "attacks": [
+      "mlp",
+      "lr_xor"
+    ]
+  },
+  "reliability_attack": {
+    "devices": 2,
+    "budgets": [
+      2000,
+      8000
+    ],
+    "n_test": 2000,
+    "noisiness": 0.1,
+    "repeats": 11
+  },
+  "quality": {
+    "constructions": [
+      "apuf",
+      "xor2",
+      "mask_only",
+      "mask_apuf",
+      "mask_xor2"
+    ],
+    "devices": 6,
+    "n_challenges": 8192,
+    "flip_challenges": 500,
+    "nist_sequence_bits": 2048,
+    "noisiness_for_reliability": 0.1,
+    "bootstrap": 300
+  },
+  "ecc": {
+    "codes": [
+      {
+        "name": "BCH(127,78,7) x2",
+        "family": "BCH",
+        "n": 127,
+        "k": 78,
+        "t": 7,
+        "bits_per_symbol": 1,
+        "blocks": 2
+      },
+      {
+        "name": "BCH(127,64,10) x2",
+        "family": "BCH",
+        "n": 127,
+        "k": 64,
+        "t": 10,
+        "bits_per_symbol": 1,
+        "blocks": 2
+      },
+      {
+        "name": "BCH(127,36,15) x4",
+        "family": "BCH",
+        "n": 127,
+        "k": 36,
+        "t": 15,
+        "bits_per_symbol": 1,
+        "blocks": 4
+      },
+      {
+        "name": "RS(24,16,4)",
+        "family": "RS",
+        "n": 24,
+        "k": 16,
+        "t": 4,
+        "bits_per_symbol": 8,
+        "blocks": 1
+      },
+      {
+        "name": "RS(32,16,8)",
+        "family": "RS",
+        "n": 32,
+        "k": 16,
+        "t": 8,
+        "bits_per_symbol": 8,
+        "blocks": 1
+      },
+      {
+        "name": "RS(48,16,16)",
+        "family": "RS",
+        "n": 48,
+        "k": 16,
+        "t": 16,
+        "bits_per_symbol": 8,
+        "blocks": 1
+      }
+    ],
+    "bers": [
+      0.02,
+      0.08,
+      0.15
+    ],
+    "models": [
+      "iid",
+      "heterogeneous",
+      "common_mode"
+    ],
+    "rho_common_mode": 0.05,
+    "decoder_trials": 60,
+    "weight_trials": 5000,
+    "analytic_grid": [
+      0.002,
+      0.25,
+      30
+    ]
+  },
+  "overhead": {
+    "hmac_challenges": 2000,
+    "pbkdf2_challenges": 100,
+    "decoder_repeats": 20,
+    "timing_repeats": 3
+  },
+  "stability_models": {
+    "devices": 2,
+    "noisiness": [
+      0.1,
+      0.2
+    ],
+    "repeats": [
+      3,
+      11
+    ],
+    "grid_budget": 4000,
+    "n_test": 2000,
+    "models": [
+      "logistic",
+      "exact_cold",
+      "exact_warm"
+    ],
+    "baseline": {
+      "noisiness": 0.1,
+      "repeats": 11,
+      "budgets": [
+        2000,
+        4000
+      ]
+    }
+  },
+  "prodlr_restarts": {
+    "k": 3,
+    "devices": 2,
+    "budget": 5000,
+    "restarts": 3
+  }
+}

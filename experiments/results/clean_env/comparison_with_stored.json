@@ -1,0 +1,78 @@
+{
+ "reference": "experiments\\results\\full",
+ "candidate": "experiments\\results\\clean_env",
+ "files": {
+  "attack_raw.csv": {
+   "identical": true,
+   "rows": 5760,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "9725338b6e5421171ed7587df67c5d38f89fd16a0a963ad80fbbcb552c8793f1"
+  },
+  "ecc_analytic.csv": {
+   "identical": true,
+   "rows": 750,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "818d46e189cee6bf282c327b7aabd174697fbb0668fa92c509de8845c950e202"
+  },
+  "ecc_raw.csv": {
+   "identical": true,
+   "rows": 144,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "856ba29688786ffbc809beca3a735589f1eadd2c08d0e45b462fa8fc71ee77ed"
+  },
+  "hardware_raw.csv": {
+   "identical": true,
+   "rows": 210,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "33a09da773edf2218b8c611a911564ee694adad47b7cdf1ae8effdebfd103516"
+  },
+  "legacy_raw.csv": {
+   "identical": true,
+   "rows": 72,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "90e7157d0f8d18890c9aa3aa2a50f2fcf2ed95916214110b39890f5e7f10488c"
+  },
+  "prodlr_restarts_raw.csv": {
+   "identical": true,
+   "rows": 100,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "28d85749306b8fccaafa65c8ce66077dc69f7480ce8b0bacad31d017258136ed"
+  },
+  "quality_per_device.csv": {
+   "identical": true,
+   "rows": 100,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "b19b23f3ba3db2edd548a77ebcd4e0c43b50c7230314b22a02d3a864e29a20c3"
+  },
+  "reliability_raw.csv": {
+   "identical": true,
+   "rows": 40,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "65d5b2d0130782ee71efebbc77c95a20e4351bcea9999248e86905a6948adb52"
+  },
+  "stability_models_raw.csv": {
+   "identical": true,
+   "rows": 570,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "284b5cc6ff12480355c7a43d4d7c1e55e3ca098669f8160ee0745325e383064e"
+  },
+  "xor_scaling_raw.csv": {
+   "identical": true,
+   "rows": 80,
+   "differing_rows": 0,
+   "sha256_of_content_without_timing": "a8ba1240f93141b736809179bccbcf9c0b168356eaa0c71f0fdcdee6e8a039b8"
+  },
+  "ecc_design.json": {
+   "identical": true
+  },
+  "hardware_meta.json": {
+   "identical": true
+  },
+  "quality_summary.json": {
+   "identical": true
+  }
+ },
+ "files_compared": 13,
+ "files_identical": 13,
+ "all_identical": true
+}

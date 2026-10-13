@@ -1,0 +1,9 @@
+section,construction,device,dist,noisiness,budget,n_train,n_val,n_test,attack,val_acc,test_acc,test_acc_ideal,seconds
+legacy,mask_apuf,0,uniform,0.0,500,400,100,500,lr,0.48,0.46,0.46,0.002
+legacy,mask_apuf,0,uniform,0.0,500,400,100,500,lr_xor,0.6,0.488,0.488,0.082
+legacy,mask_apuf,1,uniform,0.0,500,400,100,500,lr,0.62,0.496,0.496,0.002
+legacy,mask_apuf,1,uniform,0.0,500,400,100,500,lr_xor,0.66,0.512,0.512,0.118
+legacy,mask_xor2,0,uniform,0.0,500,400,100,500,lr,0.52,0.522,0.522,0.002
+legacy,mask_xor2,0,uniform,0.0,500,400,100,500,lr_xor,0.61,0.464,0.464,0.059
+legacy,mask_xor2,1,uniform,0.0,500,400,100,500,lr,0.46,0.51,0.51,0.002
+legacy,mask_xor2,1,uniform,0.0,500,400,100,500,lr_xor,0.55,0.464,0.464,0.06

@@ -1,0 +1,14 @@
+\begin{tabular}{lccccccc}
+\toprule
+Construction & LR & SVM & RF & GB & MLP & Product LR & Selected \\
+\midrule
+Arbiter & 99.2 $\pm$ 3.2 & 99.2 $\pm$ 3.8 & 89.5 $\pm$ 14.6 & 93.1 $\pm$ 1.6 & 98.4 $\pm$ 1.6 & 98.9 $\pm$ 1.0 & 99.2 $\pm$ 3.2 \\
+2-XOR arbiter & 55.8 $\pm$ 4.4 & 55.9 $\pm$ 5.4 & 67.3 $\pm$ 8.6 & 72.9 $\pm$ 9.8 & 95.8 $\pm$ 1.6 & 98.5 $\pm$ 0.6 & 98.5 $\pm$ 0.6 \\
+Mask only & 51.2 $\pm$ 7.0 & 51.1 $\pm$ 6.7 & 50.7 $\pm$ 1.6 & 49.9 $\pm$ 3.2 & 50.2 $\pm$ 14.0 & 48.8 $\pm$ 11.8 & 50.2 $\pm$ 6.0 \\
+Masked arbiter & 49.7 $\pm$ 3.5 & 49.6 $\pm$ 3.5 & 48.9 $\pm$ 6.7 & 49.0 $\pm$ 13.0 & 50.0 $\pm$ 0.0 & 50.0 $\pm$ 9.8 & 50.0 $\pm$ 9.8 \\
+Masked 2-XOR (full) & 50.6 $\pm$ 4.1 & 50.6 $\pm$ 4.1 & 50.7 $\pm$ 10.8 & 49.7 $\pm$ 6.0 & 50.5 $\pm$ 15.2 & 49.6 $\pm$ 20.0 & 50.2 $\pm$ 11.4 \\
+\midrule
+Masked arbiter, key known & 99.2 $\pm$ 3.2 &  &  &  &  &  &  \\
+Masked 2-XOR (full), key known &  &  &  &  &  & 98.8 $\pm$ 2.2 &  \\
+\bottomrule
+\end{tabular}

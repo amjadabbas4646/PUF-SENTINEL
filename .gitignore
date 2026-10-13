@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+build/
+experiments/results/rerun/
+figures/png/
+run_log_*.txt
+RESULTS_VERIFICATION_LEDGER.csv
+experiments/results/validation_report.json

@@ -1,0 +1,13 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{Arbiter} & \multicolumn{2}{c}{2-XOR} & \multicolumn{2}{c}{Masked 2-XOR} \\
+Attack & Unit of effort & Effort & Time (s) & Effort & Time (s) & Effort & Time (s) \\
+\midrule
+LR & iterations & 18 & 0.1 & 4 & 0.0 & 3 & 0.0 \\
+SVM & iterations & 11 & 0.3 & 3 & 0.2 & 3 & 0.1 \\
+RF & trees & 100 & 5.8 & 100 & 6.0 & 100 & 5.9 \\
+GB & iterations & 200 & 7.9 & 200 & 5.9 & 200 & 5.0 \\
+MLP & epochs & 22 & 4.9 & 22 & 5.3 & 16 & 3.7 \\
+Product LR & epochs (restarts) & 100 (1) & 7.1 & 54 (2) & 3.9 & 84 (5) & 6.1 \\
+\bottomrule
+\end{tabular}

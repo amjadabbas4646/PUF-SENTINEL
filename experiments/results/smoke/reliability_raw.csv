@@ -1,0 +1,5 @@
+device,budget,queries,noisiness,repeats,unstable_fraction,mask_cancels,hidden_model_acc,abs_cosine
+0,2000,22000,0.1,11,0.156,True,0.988,0.999104
+0,8000,88000,0.1,11,0.155875,True,0.994,0.999856
+1,2000,22000,0.1,11,0.095,True,0.991,0.999584
+1,8000,88000,0.1,11,0.09025,True,0.9965,0.999914

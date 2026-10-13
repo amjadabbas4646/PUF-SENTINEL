@@ -1,0 +1,224 @@
+{
+ "stages": {
+  "classes": {
+   "seconds": 179.2,
+   "finished_utc": "2026-10-13T14:08:21Z",
+   "files": {
+    "classes_raw.csv": "d3dbd4ae13623291552a584a536a93e06c4231e83f937446f76d780012c4134a"
+   }
+  },
+  "class_stability": {
+   "seconds": 33.0,
+   "finished_utc": "2026-10-13T13:53:20Z",
+   "files": {
+    "class_stability_raw.csv": "7927e13f9ddbab0bbd623077fa7a35da04667daed8aeed399d0e7cc25ebfd56d"
+   }
+  },
+  "xor_stability": {
+   "seconds": 184.4,
+   "finished_utc": "2026-10-13T13:56:24Z",
+   "files": {
+    "xor_stability_raw.csv": "60c2da8221894242e5fc24d55c2c5b6c555dca499dfcf20477c17990861830dd"
+   }
+  },
+  "convergence": {
+   "seconds": 107.3,
+   "finished_utc": "2026-10-13T13:58:12Z",
+   "files": {
+    "convergence_raw.csv": "dc954911f03433e4c32a63f1b680bd76b525f4e88ca5bea648a89a8b05f23b8f"
+   }
+  },
+  "entropy": {
+   "seconds": 0.0,
+   "finished_utc": "2026-10-13T13:58:12Z",
+   "files": {
+    "entropy_bounds.csv": "ee1e3bfeb300800e510fb4b1d1f7693576f46064b9328820475c3526c437ca5d"
+   }
+  },
+  "fpga": {
+   "seconds": 174.9,
+   "finished_utc": "2026-10-13T14:01:06Z",
+   "files": {
+    "fpga_raw.csv": "ceaa86f6210302d2a539b53dc50729ac8e89bd44792ad8a37d492e24228861ab",
+    "fpga_meta.json": "088170bcb76bcd0a42458668739fcb9e50dfd150e38f9bef1736ba1d0c68d719"
+   }
+  }
+ },
+ "master_seed": 20261011,
+ "config_file": "configs/extensions_full.json",
+ "config": {
+  "profile": "full",
+  "base_config": "configs/full.json",
+  "classes": {
+   "kinds": [
+    "X",
+    "L",
+    "P",
+    "H"
+   ],
+   "devices": 10,
+   "budgets": [
+    3000,
+    30000
+   ],
+   "base_k": 2,
+   "hash_bits": 8,
+   "attacks": [
+    "lr",
+    "svm",
+    "rf",
+    "gb",
+    "mlp",
+    "lr_xor"
+   ]
+  },
+  "class_stability": {
+   "kinds": [
+    "X",
+    "L",
+    "P",
+    "H"
+   ],
+   "devices": 10,
+   "budget": 10000,
+   "n_test": 10000,
+   "noisiness": 0.1,
+   "repeats": 11,
+   "hash_bits": 8
+  },
+  "xor_stability": {
+   "k": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "devices": 10,
+   "budgets": [
+    3000,
+    10000,
+    30000
+   ],
+   "n_test": 10000,
+   "noisiness": 0.1,
+   "repeats": 11,
+   "sign_crps": 20
+  },
+  "convergence": {
+   "constructions": [
+    "apuf",
+    "xor2",
+    "mask_xor2"
+   ],
+   "devices": 10,
+   "attacks": [
+    "lr",
+    "svm",
+    "rf",
+    "gb",
+    "mlp",
+    "lr_xor"
+   ]
+  },
+  "entropy": {
+   "bias_p": [
+    0.5,
+    0.48,
+    0.45,
+    0.42,
+    0.4,
+    0.35,
+    0.3
+   ]
+  },
+  "fpga": {
+   "top": "AM21_top.npz",
+   "chains": [
+    "AM21_b0.npz",
+    "AM21_b1.npz",
+    "AM21_b2.npz",
+    "AM21_b3.npz",
+    "AM21_b4.npz"
+   ],
+   "pool": 120000,
+   "n_test": 10000,
+   "budgets": [
+    1000,
+    10000,
+    30000
+   ],
+   "attacks": [
+    "lr",
+    "svm",
+    "rf",
+    "gb",
+    "mlp",
+    "lr_xor"
+   ]
+  }
+ },
+ "attack_config": {
+  "lr": {
+   "C": 10.0,
+   "max_iter": 2000
+  },
+  "svm": {
+   "C": 1.0,
+   "max_iter": 5000
+  },
+  "rf": {
+   "n_estimators": 100
+  },
+  "gb": {
+   "max_iter": 200,
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 31
+  },
+  "mlp": {
+   "hidden": [
+    64,
+    64,
+    64
+   ],
+   "lr": 0.003,
+   "batch": 256,
+   "max_epochs": 150,
+   "patience": 12
+  },
+  "lr_xor": {
+   "lr": 0.02,
+   "batch": 256,
+   "max_epochs": 100,
+   "patience": 10,
+   "restarts": 5
+  }
+ },
+ "reliability_config": {
+  "repeats": 11,
+  "lr": 0.02,
+  "batch": 256,
+  "max_epochs": 150,
+  "patience": 15,
+  "restarts": 5,
+  "val_fraction": 0.2
+ },
+ "joint_stability_config": {
+  "lr": 0.02,
+  "batch": 256,
+  "max_epochs": 150,
+  "patience": 15,
+  "restarts": 8,
+  "val_fraction": 0.2
+ },
+ "versions": {
+  "python": "3.12.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "scikit-learn": "1.6.1",
+  "torch": "2.7.1+cpu",
+  "joblib": "1.5.1",
+  "cpu_count": 16
+ },
+ "jobs": 14
+}

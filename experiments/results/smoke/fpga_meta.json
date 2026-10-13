@@ -1,0 +1,81 @@
+{
+ "source": "Zenodo record 10.5281/zenodo.5221305 (pypuf data), measured by Aghaie and Moradi",
+ "instances": [
+  {
+   "name": "top",
+   "kind": "arbiter",
+   "files": [
+    "AM21_top.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b0",
+   "kind": "arbiter",
+   "files": [
+    "AM21_b0.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b1",
+   "kind": "arbiter",
+   "files": [
+    "AM21_b1.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b2",
+   "kind": "arbiter",
+   "files": [
+    "AM21_b2.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b3",
+   "kind": "arbiter",
+   "files": [
+    "AM21_b3.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b4",
+   "kind": "arbiter",
+   "files": [
+    "AM21_b4.npz"
+   ],
+   "k": 1
+  },
+  {
+   "name": "b0^b1",
+   "kind": "xor2",
+   "files": [
+    "AM21_b0.npz",
+    "AM21_b1.npz"
+   ],
+   "k": 2
+  },
+  {
+   "name": "b0^b2",
+   "kind": "xor2",
+   "files": [
+    "AM21_b0.npz",
+    "AM21_b2.npz"
+   ],
+   "k": 2
+  }
+ ],
+ "files_sha256": {
+  "AM21_top.npz": "774675e7cbad32941d0dd2657a595128b092768819fcbe9f13fd0b0f1766df21",
+  "AM21_b0.npz": "24b363c0804b3ba3d9fd05b268e3b7a9c6a2c6594d6c734528837acbc103f58e",
+  "AM21_b1.npz": "0f3db4692ca1ff8ee58bba8de851ee05a2a33839437cd0e4a82ccfcf3b708ad5",
+  "AM21_b2.npz": "e80951d05c835d170735596b6e3a3e6aabf22818082997c50d723081a1077304",
+  "AM21_b3.npz": "8042aebc709950cff98e48a57ea82d9d93d22496abe18af042b720447caec7a2",
+  "AM21_b4.npz": "8c952e204a7267f9b7e24509d218e3ab9b1eacc88466235aafbf7c7aa4974b05"
+ },
+ "measurements_per_challenge": 1,
+ "note": "2-XOR instances are XORs, computed in software, of the measured bits of two chains that answered the same challenges. One measurement per challenge, so no stability attack is possible on these data."
+}

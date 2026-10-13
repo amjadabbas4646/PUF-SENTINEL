@@ -1,0 +1,12 @@
+\begin{tabular}{llcccc}
+\toprule
+ & & Direct attack, & PUF replaced by & Secret known, & Stability only, \\
+Class & Secret & selected & a public function & matched attack & response prediction \\
+\midrule
+R: keyed response mask & key & 50.0 $\pm$ 0.4 & 50.3 $\pm$ 0.3 & 98.0 $\pm$ 0.1 & 49.9 (49.3, 50.4) \\
+X: challenge XOR key & key & 98.0 $\pm$ 0.1 & 98.0 $\pm$ 0.1 & 98.1 $\pm$ 0.1 & 99.2 (99.0, 99.4) \\
+L: secret linear challenge map & matrix & 52.1 $\pm$ 1.6 & 49.9 $\pm$ 0.2 & 97.9 $\pm$ 0.2 & 50.1 (49.3, 51.0) \\
+P: keyed challenge PRF & key & 52.3 $\pm$ 1.6 & 50.0 $\pm$ 0.4 & 98.1 $\pm$ 0.1 & 50.2 (49.5, 51.1) \\
+H: keyless hashed output & none & 50.0 $\pm$ 0.4 & 50.1 $\pm$ 0.4 (100) & no secret & 96.1 (94.9, 97.2) \\
+\bottomrule
+\end{tabular}

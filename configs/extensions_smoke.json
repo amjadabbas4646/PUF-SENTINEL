@@ -1,0 +1,47 @@
+{
+  "profile": "smoke",
+  "base_config": "configs/smoke.json",
+  "classes": {
+    "kinds": ["X", "L", "P", "H"],
+    "devices": 2,
+    "budgets": [1000],
+    "base_k": 2,
+    "hash_bits": 4,
+    "attacks": ["lr", "mlp", "lr_xor"]
+  },
+  "class_stability": {
+    "kinds": ["X", "L", "P", "H"],
+    "devices": 2,
+    "budget": 2000,
+    "n_test": 1000,
+    "noisiness": 0.1,
+    "repeats": 5,
+    "hash_bits": 4
+  },
+  "xor_stability": {
+    "k": [1, 2],
+    "devices": 2,
+    "budgets": [2000],
+    "n_test": 1000,
+    "noisiness": 0.1,
+    "repeats": 5,
+    "sign_crps": 20
+  },
+  "convergence": {
+    "constructions": ["apuf", "xor2"],
+    "devices": 2,
+    "attacks": ["lr", "mlp", "lr_xor"]
+  },
+  "entropy": {
+    "bias_p": [0.5, 0.45, 0.4]
+  },
+  "fpga": {
+    "top": "AM21_top.npz",
+    "chains": ["AM21_b0.npz", "AM21_b1.npz", "AM21_b2.npz", "AM21_b3.npz", "AM21_b4.npz"],
+    "pool": 20000,
+    "n_test": 2000,
+    "budgets": [1000, 5000],
+    "attacks": ["lr", "lr_xor"],
+    "max_instances": 8
+  }
+}

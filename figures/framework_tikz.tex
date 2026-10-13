@@ -1,0 +1,22 @@
+% Construction under test. Schematic, drawn in black, text in the document font.
+\begin{tikzpicture}[font=\footnotesize, >=Stealth,
+  box/.style={draw, line width=0.5pt, rounded corners=1pt, minimum height=8.5mm,
+              align=center, inner sep=3pt},
+  arr/.style={->, line width=0.5pt}]
+  \node[box] (c)    at (0,0)      {challenge\\$c\in\{0,1\}^{n}$};
+  \node[box] (mask) at (5.2,0.95) {keyed mask $M_K(c)$\\HMAC-SHA256};
+  \node[box] (puf)  at (5.2,-0.95){$k$ arbiter chains\\XOR of chain bits $b(c)$};
+  \node[draw, circle, line width=0.5pt, inner sep=1.2pt] (xor) at (8.9,0) {$\oplus$};
+  \node[box] (r)    at (11.9,0)   {response\\$r(c)=b(c)\oplus M_K(c)$};
+  \node[box] (w)    at (-0.2,2.75){weak PUF reading $w'$\\helper data $h$};
+  \node[box] (rep)  at (2.75,2.75){code-offset\\decoder};
+  \node[box] (k)    at (5.2,2.75) {device key $K$};
+  \draw[arr] (c.east) -- ++(0.55,0) |- (mask.west);
+  \draw[arr] (c.east) -- ++(0.55,0) |- (puf.west);
+  \draw[arr] (mask.east) -| (xor.north);
+  \draw[arr] (puf.east) -| (xor.south);
+  \draw[arr] (xor.east) -- (r.west);
+  \draw[arr] (k.south) -- (mask.north);
+  \draw[arr] (rep.east) -- (k.west);
+  \draw[arr] (w.east) -- (rep.west);
+\end{tikzpicture}

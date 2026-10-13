@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.terminal.activateEnvironment": true,
+  "files.exclude": { "**/__pycache__": true, "**/*.aux": true, "**/*.fls": true,
+                     "**/*.fdb_latexmk": true, "**/*.out": true, "**/*.blg": true },
+  "task.allowAutomaticTasks": "off"
+}

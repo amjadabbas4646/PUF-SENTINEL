@@ -1,0 +1,15 @@
+\begin{tabular}{llccccc}
+\toprule
+Construction & Condition & Mean & 95\% CI ($t$) & 95\% CI (bootstrap) & $p_{\mathrm{TOST}}$ & VR \\
+\midrule
+Mask only & uniform, noise free & 50.28 & [50.00, 50.55] & [50.05, 50.50] & $<$0.001 & 0.59 \\
+Mask only & correlated, noise free & 49.89 & [49.61, 50.16] & [49.67, 50.12] & $<$0.001 & 0.59 \\
+Mask only & uniform, noisy & 50.07 & [49.69, 50.46] & [49.78, 50.41] & $<$0.001 & 1.16 \\
+Masked arbiter & uniform, noise free & 49.92 & [49.57, 50.26] & [49.60, 50.16] & $<$0.001 & 0.95 \\
+Masked arbiter & correlated, noise free & 50.27 & [49.99, 50.54] & [50.03, 50.49] & $<$0.001 & 0.59 \\
+Masked arbiter & uniform, noisy & 49.74 & [49.32, 50.16] & [49.40, 50.08] & 0.002 & 1.39 \\
+Masked 2-XOR (full) & uniform, noise free & 50.00 & [49.58, 50.42] & [49.66, 50.34] & $<$0.001 & 1.37 \\
+Masked 2-XOR (full) & correlated, noise free & 50.32 & [49.95, 50.69] & [50.03, 50.63] & 0.001 & 1.07 \\
+Masked 2-XOR (full) & uniform, noisy & 50.06 & [49.63, 50.48] & [49.69, 50.39] & $<$0.001 & 1.43 \\
+\bottomrule
+\end{tabular}

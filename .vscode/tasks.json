@@ -1,0 +1,48 @@
+{
+  // PUF-SENTINEL tasks. In VS Code: Terminal > Run Task... and pick one.
+  // Run task 1 once first: it creates the Python environment (.venv).
+  "version": "2.0.0",
+  "options": {
+    "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] }
+  },
+  "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+  "tasks": [
+    {
+      "label": "1. Setup and quick run (smoke test, about 10 minutes the first time)",
+      "type": "shell",
+      "command": "setup_and_run.bat smoke nopause",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "2. Run the unit tests",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python.exe -m pytest tests -q",
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Regenerate all tables and figures of the article (plots also as PNG in figures/png)",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python.exe experiments\\analyze.py --profile full && .venv\\Scripts\\python.exe experiments\\analyze_extensions.py --profile full && .venv\\Scripts\\python.exe scripts\\make_figures.py --profile full --png figures\\png",
+      "problemMatcher": []
+    },
+    {
+      "label": "4. Check every number, table and claim (validation)",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python.exe scripts\\validate_outputs.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "5. Compile the article PDF (needs TeX Live or MiKTeX)",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python.exe scripts\\build_cee.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "6. Run all experiments again (about 35 minutes)",
+      "type": "shell",
+      "command": "setup_and_run.bat full nopause",
+      "problemMatcher": []
+    }
+  ]
+}

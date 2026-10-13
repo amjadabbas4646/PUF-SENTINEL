@@ -1,0 +1,14 @@
+{
+ "code": "RS(48,16,16)",
+ "ber": 0.01,
+ "exact_failure": 5.0906347943568625e-08,
+ "trials": 10000000,
+ "failures": 0,
+ "expected_failures": 0.5090634794356862,
+ "binomial_test_p": 1.0,
+ "main_run": {
+  "trials": 200000,
+  "failures": 1,
+  "p_at_least_one": 0.010129616162957378
+ }
+}

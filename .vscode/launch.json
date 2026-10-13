@@ -1,0 +1,23 @@
+{
+  // Run or debug single scripts with F5 (needs the Python extension of VS Code).
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run the open Python file",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Regenerate figures",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/make_figures.py",
+      "args": ["--profile", "full"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

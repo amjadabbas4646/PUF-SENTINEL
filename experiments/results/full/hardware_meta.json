@@ -1,0 +1,36 @@
+{
+ "fpga_apuf": {
+  "file": "AM21_top.npz",
+  "sha256": "774675e7cbad32941d0dd2657a595128b092768819fcbe9f13fd0b0f1766df21",
+  "crps_read": 320000,
+  "duplicate_challenges_dropped": 0,
+  "crps_used_pool": 320000,
+  "fraction_of_ones": 0.304684375,
+  "devices": 1,
+  "measurements_per_challenge": 1,
+  "splits": 5,
+  "n_test": 10000,
+  "budgets": [
+   1000,
+   10000,
+   100000
+  ]
+ },
+ "fpga_xor4": {
+  "file": "MTZAA20_4XOR_64bit_LUT_2239B_attacking_1M.txt.npz",
+  "sha256": "457750dfb261c17b382d0c2cd9a11034537c60843ded96c45cc9a9c481dfd31d",
+  "crps_read": 320000,
+  "duplicate_challenges_dropped": 0,
+  "crps_used_pool": 320000,
+  "fraction_of_ones": 0.481459375,
+  "devices": 1,
+  "measurements_per_challenge": 1,
+  "splits": 5,
+  "n_test": 10000,
+  "budgets": [
+   10000,
+   100000,
+   300000
+  ]
+ }
+}

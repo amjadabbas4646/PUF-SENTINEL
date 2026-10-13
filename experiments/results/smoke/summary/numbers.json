@@ -1,0 +1,632 @@
+{
+ "masked": {
+  "cells": 108,
+  "fits": 216,
+  "cell_mean_min": 0.47550000000000003,
+  "cell_mean_max": 0.5175,
+  "device_min": 0.466,
+  "device_max": 0.5345,
+  "binomial_sd_one_fit": 0.011180339887498949,
+  "selected_all_equivalent": false,
+  "single_attack_cells_at_max_budget": 54,
+  "single_attack_cells_equivalent": 5,
+  "single_attack_cells_t_p_below_0.05": 1
+ },
+ "apuf": {
+  "lr_max": 0.9915,
+  "lr_1000": null,
+  "lr_first_95": 500,
+  "lr_first_99": 5000,
+  "rf_max": 0.8945000000000001,
+  "gb_max": 0.93125,
+  "mlp_max": 0.98375,
+  "lr_markov_max": 0.99175,
+  "lr_noisy_max": 0.96375,
+  "lr_noisy_vs_ideal_max": 0.98925
+ },
+ "xor2": {
+  "lr_max": 0.5575000000000001,
+  "svm_max": 0.55875,
+  "rf_max": 0.67275,
+  "gb_max": 0.72925,
+  "mlp_max": 0.95825,
+  "lr_xor_max": 0.9850000000000001,
+  "best_max": 0.9850000000000001,
+  "lr_xor_first_95": 5000,
+  "mlp_first_95": 5000,
+  "best_markov_max": 0.98925,
+  "best_noisy_max": 0.9215,
+  "best_noisy_vs_ideal_max": 0.972,
+  "selected_counts": "{\"lr_xor\": 2}"
+ },
+ "full": {
+  "best_max": 0.5025,
+  "best_lo": 0.38814415737211133,
+  "best_hi": 0.6168558426278885,
+  "oracle_max": 0.98775,
+  "oracle_apuf_max": 0.9915
+ },
+ "oracle_check": {
+  "mask_apuf_oracle_minus_apuf_lr": 0.0,
+  "note": "oracle fits use their own seed, so product LR may differ slightly from the unmasked run"
+ },
+ "legacy": {
+  "budget": 500,
+  "devices": 2,
+  "mask_apuf": {
+   "mean": 0.5,
+   "lo": 0.3475255431628147,
+   "hi": 0.6524744568371853
+  },
+  "mask_xor2": {
+   "mean": 0.464,
+   "lo": 0.464,
+   "hi": 0.464
+  }
+ },
+ "xor_scaling": {
+  "k1_mlp_5000": {
+   "mean": 0.98725,
+   "min": 0.9855,
+   "max": 0.989
+  },
+  "k1_lr_xor_5000": {
+   "mean": 0.9895,
+   "min": 0.9895,
+   "max": 0.9895
+  },
+  "k2_mlp_5000": {
+   "mean": 0.9605,
+   "min": 0.9595,
+   "max": 0.9615
+  },
+  "k2_lr_xor_5000": {
+   "mean": 0.9845,
+   "min": 0.9835,
+   "max": 0.9855
+  },
+  "k3_mlp_5000": {
+   "mean": 0.9312499999999999,
+   "min": 0.9145,
+   "max": 0.948
+  },
+  "k3_lr_xor_5000": {
+   "mean": 0.96675,
+   "min": 0.9635,
+   "max": 0.97
+  }
+ },
+ "reliability": {
+  "mask_cancels_all": true,
+  "repeats": 11,
+  "noisiness": 0.1,
+  "rows": {
+   "2000": {
+    "mean": 0.9895,
+    "min": 0.988,
+    "max": 0.991,
+    "ci_lo": 0.9704406928953518,
+    "ci_hi": 1.0085593071046481,
+    "unstable_fraction": 0.1255,
+    "queries": 22000
+   },
+   "8000": {
+    "mean": 0.99525,
+    "min": 0.994,
+    "max": 0.9965,
+    "ci_lo": 0.9793672440794595,
+    "ci_hi": 1.0111327559205405,
+    "unstable_fraction": 0.1230625,
+    "queries": 88000
+   }
+  }
+ },
+ "quality": {
+  "apuf": {
+   "uniformity_mean": 0.4845784505208333,
+   "uniformity_sd": 0.08586470092508697,
+   "uniformity_min": 0.3408203125,
+   "uniformity_max": 0.60107421875,
+   "uniqueness": 0.476123046875,
+   "uniq_lo": 0.43782552083333337,
+   "uniq_hi": 0.5164536696213942,
+   "aliasing_sd": 0.22668005070835498,
+   "aliasing_sd_ideal": 0.20412414523193154,
+   "shannon": 0.981336192914902,
+   "min_entropy": 0.8093997082315728,
+   "flip_mean": 0.49380208333333336,
+   "flip_min": 0.18699999999999997,
+   "flip_max": 0.8856666666666667,
+   "nist_freq": {
+    "sequences": 24,
+    "pass_proportion": 0.4583333333333333,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": false,
+    "ks_p_uniform": 2.2970210399680043e-10
+   },
+   "nist_runs": {
+    "sequences": 24,
+    "pass_proportion": 0.5833333333333334,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": false,
+    "ks_p_uniform": 0.00027414718174583033
+   },
+   "intra_ber": 0.030537923177083332
+  },
+  "xor2": {
+   "uniformity_mean": 0.4984334309895833,
+   "uniformity_sd": 0.0578634098070178,
+   "uniformity_min": 0.397705078125,
+   "uniformity_max": 0.551025390625,
+   "uniqueness": 0.4986083984375,
+   "uniq_lo": 0.489288330078125,
+   "uniq_hi": 0.510997532130955,
+   "aliasing_sd": 0.20554611133781764,
+   "aliasing_sd_ideal": 0.20412414523193154,
+   "shannon": 0.9919028252681126,
+   "min_entropy": 0.844421196495274,
+   "flip_mean": 0.4176770833333333,
+   "flip_min": 0.19266666666666668,
+   "flip_max": 0.5026666666666667,
+   "nist_freq": {
+    "sequences": 24,
+    "pass_proportion": 0.2916666666666667,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": false,
+    "ks_p_uniform": 1.1632642363566294e-14
+   },
+   "nist_runs": {
+    "sequences": 24,
+    "pass_proportion": 0.625,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": false,
+    "ks_p_uniform": 0.0009561356120695308
+   },
+   "intra_ber": 0.06473795572916667
+  },
+  "mask_only": {
+   "uniformity_mean": 0.5012003580729166,
+   "uniformity_sd": 0.00769620809491085,
+   "uniformity_min": 0.4884033203125,
+   "uniformity_max": 0.5103759765625,
+   "uniqueness": 0.5002522786458333,
+   "uniq_lo": 0.49832927997295673,
+   "uniq_hi": 0.5024507962740384,
+   "aliasing_sd": 0.20387541190560865,
+   "aliasing_sd_ideal": 0.20412414523193154,
+   "shannon": 0.999853410679743,
+   "min_entropy": 0.9422422231449676,
+   "flip_mean": 0.5014270833333333,
+   "flip_min": 0.476,
+   "flip_max": 0.5220000000000001,
+   "nist_freq": {
+    "sequences": 24,
+    "pass_proportion": 0.9166666666666666,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": false,
+    "ks_p_uniform": 0.6967832764627206
+   },
+   "nist_runs": {
+    "sequences": 24,
+    "pass_proportion": 1.0,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": true,
+    "ks_p_uniform": 0.31848812289880013
+   },
+   "intra_ber": 0.0
+  },
+  "mask_apuf": {
+   "uniformity_mean": 0.49371337890625,
+   "uniformity_sd": 0.0066645248270601936,
+   "uniformity_min": 0.4849853515625,
+   "uniformity_max": 0.5006103515625,
+   "uniqueness": 0.5000895182291667,
+   "uniq_lo": 0.4964044744318182,
+   "uniq_hi": 0.5051915095402644,
+   "aliasing_sd": 0.20394833489152042,
+   "aliasing_sd_ideal": 0.20412414523193154,
+   "shannon": 0.999779140352445,
+   "min_entropy": 0.9415135034003487,
+   "flip_mean": 0.5010625,
+   "flip_min": 0.48566666666666664,
+   "flip_max": 0.5156666666666667,
+   "nist_freq": {
+    "sequences": 24,
+    "pass_proportion": 0.9583333333333334,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": true,
+    "ks_p_uniform": 0.09160867893373603
+   },
+   "nist_runs": {
+    "sequences": 24,
+    "pass_proportion": 1.0,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": true,
+    "ks_p_uniform": 0.899169222874171
+   },
+   "intra_ber": 0.030537923177083332
+  },
+  "mask_xor2": {
+   "uniformity_mean": 0.495849609375,
+   "uniformity_sd": 0.003400485419234404,
+   "uniformity_min": 0.4915771484375,
+   "uniformity_max": 0.5008544921875,
+   "uniqueness": 0.5001953125,
+   "uniq_lo": 0.4943292791193182,
+   "uniq_hi": 0.5064885066105769,
+   "aliasing_sd": 0.2038949130352272,
+   "aliasing_sd_ideal": 0.20412414523193154,
+   "shannon": 0.9999224904051887,
+   "min_entropy": 0.9471419641846476,
+   "flip_mean": 0.5004791666666667,
+   "flip_min": 0.48133333333333334,
+   "flip_max": 0.5153333333333333,
+   "nist_freq": {
+    "sequences": 24,
+    "pass_proportion": 1.0,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": true,
+    "ks_p_uniform": 0.6214347554898811
+   },
+   "nist_runs": {
+    "sequences": 24,
+    "pass_proportion": 1.0,
+    "accept_lo": 0.9290697119652302,
+    "accept_hi": 1.0,
+    "proportion_ok": true,
+    "ks_p_uniform": 0.764594177946589
+   },
+   "intra_ber": 0.06473795572916667
+  },
+  "devices": 6,
+  "challenges": 8192,
+  "nist_sequences": 24
+ },
+ "ecc": {
+  "decoder_agreement_min": 1.0,
+  "decoder_trials_total": 3240,
+  "codes": {
+   "BCH(127,78,7) x2": {
+    "family": "BCH",
+    "field": "GF(2)",
+    "n": 127,
+    "k": 78,
+    "t": 7,
+    "d": 15,
+    "d_kind": "designed distance (lower bound)",
+    "blocks": 2,
+    "puf_bits": 254,
+    "secret_bits": 156,
+    "helper_bits": 254,
+    "leakage_bound_bits": 98,
+    "max_ber_fail_1e-6": 0.005334095167864371,
+    "max_ber_fail_1e-3": 0.01421648849534557,
+    "fail_iid_0.02": 0.008,
+    "fail_heterogeneous_0.02": 0.0104,
+    "fail_common_mode_0.02": 0.1222,
+    "fail_iid_0.08": 0.9642,
+    "fail_heterogeneous_0.08": 0.9654,
+    "fail_common_mode_0.08": 0.6204
+   },
+   "BCH(127,64,10) x2": {
+    "family": "BCH",
+    "field": "GF(2)",
+    "n": 127,
+    "k": 64,
+    "t": 10,
+    "d": 21,
+    "d_kind": "designed distance (lower bound)",
+    "blocks": 2,
+    "puf_bits": 254,
+    "secret_bits": 128,
+    "helper_bits": 254,
+    "leakage_bound_bits": 126,
+    "max_ber_fail_1e-6": 0.012100968589475125,
+    "max_ber_fail_1e-3": 0.025918017030764403,
+    "fail_iid_0.02": 0.0006,
+    "fail_heterogeneous_0.02": 0.0,
+    "fail_common_mode_0.02": 0.0796,
+    "fail_iid_0.08": 0.6846,
+    "fail_heterogeneous_0.08": 0.6832,
+    "fail_common_mode_0.08": 0.4668
+   },
+   "BCH(127,36,15) x4": {
+    "family": "BCH",
+    "field": "GF(2)",
+    "n": 127,
+    "k": 36,
+    "t": 15,
+    "d": 31,
+    "d_kind": "designed distance (lower bound)",
+    "blocks": 4,
+    "puf_bits": 508,
+    "secret_bits": 144,
+    "helper_bits": 508,
+    "leakage_bound_bits": 364,
+    "max_ber_fail_1e-6": 0.026155271963649026,
+    "max_ber_fail_1e-3": 0.04593352036234305,
+    "fail_iid_0.02": 0.0,
+    "fail_heterogeneous_0.02": 0.0,
+    "fail_common_mode_0.02": 0.0388,
+    "fail_iid_0.08": 0.1804,
+    "fail_heterogeneous_0.08": 0.1784,
+    "fail_common_mode_0.08": 0.3232
+   },
+   "RS(24,16,4)": {
+    "family": "RS",
+    "field": "GF(2^8)",
+    "n": 24,
+    "k": 16,
+    "t": 4,
+    "d": 9,
+    "d_kind": "minimum distance",
+    "blocks": 1,
+    "puf_bits": 192,
+    "secret_bits": 128,
+    "helper_bits": 192,
+    "leakage_bound_bits": 64,
+    "max_ber_fail_1e-6": 0.0009621721063502451,
+    "max_ber_fail_1e-3": 0.004201919403217069,
+    "fail_iid_0.02": 0.2892,
+    "fail_heterogeneous_0.02": 0.287,
+    "fail_common_mode_0.02": 0.2404,
+    "fail_iid_0.08": 0.9986,
+    "fail_heterogeneous_0.08": 0.9992,
+    "fail_common_mode_0.08": 0.8092
+   },
+   "RS(32,16,8)": {
+    "family": "RS",
+    "field": "GF(2^8)",
+    "n": 32,
+    "k": 16,
+    "t": 8,
+    "d": 17,
+    "d_kind": "minimum distance",
+    "blocks": 1,
+    "puf_bits": 256,
+    "secret_bits": 128,
+    "helper_bits": 256,
+    "leakage_bound_bits": 128,
+    "max_ber_fail_1e-6": 0.004410865667387297,
+    "max_ber_fail_1e-3": 0.01094656967470492,
+    "fail_iid_0.02": 0.038,
+    "fail_heterogeneous_0.02": 0.0398,
+    "fail_common_mode_0.02": 0.17,
+    "fail_iid_0.08": 0.9916,
+    "fail_heterogeneous_0.08": 0.9934,
+    "fail_common_mode_0.08": 0.707
+   },
+   "RS(48,16,16)": {
+    "family": "RS",
+    "field": "GF(2^8)",
+    "n": 48,
+    "k": 16,
+    "t": 16,
+    "d": 33,
+    "d_kind": "minimum distance",
+    "blocks": 1,
+    "puf_bits": 384,
+    "secret_bits": 128,
+    "helper_bits": 384,
+    "leakage_bound_bits": 256,
+    "max_ber_fail_1e-6": 0.012421014352431758,
+    "max_ber_fail_1e-3": 0.021952945187823033,
+    "fail_iid_0.02": 0.0002,
+    "fail_heterogeneous_0.02": 0.0004,
+    "fail_common_mode_0.02": 0.1152,
+    "fail_iid_0.08": 0.9768,
+    "fail_heterogeneous_0.08": 0.979,
+    "fail_common_mode_0.08": 0.5982
+   }
+  },
+  "max_abs_z_simulation_vs_analytic": 3.338267862295232
+ },
+ "overhead": {
+  "hmac_us": 2.9538500239141285,
+  "pbkdf2_us": 407.2199994698167,
+  "ratio": 137.86075669820636,
+  "rep_ms": {
+   "BCH(127,78,7) x2": 0.2081500133499503,
+   "BCH(127,64,10) x2": 0.27344998670741916,
+   "BCH(127,36,15) x4": 0.4227000754326582,
+   "RS(24,16,4)": 0.11205003829672933,
+   "RS(32,16,8)": 0.2753000007942319,
+   "RS(48,16,16)": 0.7730000070296228
+  },
+  "attack_seconds_median_at_max_budget": {
+   "lr": 0.009000000000000001,
+   "svm": 0.0125,
+   "rf": 0.666,
+   "gb": 1.0935000000000001,
+   "mlp": 0.912,
+   "lr_xor": 1.1400000000000001
+  }
+ },
+ "hardware": {
+  "meta": {
+   "fpga_apuf": {
+    "file": "AM21_top.npz",
+    "sha256": "774675e7cbad32941d0dd2657a595128b092768819fcbe9f13fd0b0f1766df21",
+    "crps_read": 320000,
+    "duplicate_challenges_dropped": 0,
+    "crps_used_pool": 320000,
+    "fraction_of_ones": 0.304684375,
+    "devices": 1,
+    "measurements_per_challenge": 1,
+    "splits": 2,
+    "n_test": 10000,
+    "budgets": [
+     1000,
+     5000
+    ]
+   },
+   "fpga_xor4": {
+    "file": "MTZAA20_4XOR_64bit_LUT_2239B_attacking_1M.txt.npz",
+    "sha256": "457750dfb261c17b382d0c2cd9a11034537c60843ded96c45cc9a9c481dfd31d",
+    "crps_read": 320000,
+    "duplicate_challenges_dropped": 0,
+    "crps_used_pool": 320000,
+    "fraction_of_ones": 0.481459375,
+    "devices": 1,
+    "measurements_per_challenge": 1,
+    "splits": 2,
+    "n_test": 10000,
+    "budgets": [
+     5000,
+     20000
+    ]
+   }
+  },
+  "rows": {
+   "fpga_apuf|measured|1000|lr": {
+    "mean": 0.96345,
+    "min": 0.9623,
+    "max": 0.9646
+   },
+   "fpga_apuf|measured|1000|mlp": {
+    "mean": 0.95595,
+    "min": 0.9519,
+    "max": 0.96
+   },
+   "fpga_apuf|measured|1000|lr_xor": {
+    "mean": 0.9551499999999999,
+    "min": 0.9487,
+    "max": 0.9616
+   },
+   "fpga_apuf|measured|5000|lr": {
+    "mean": 0.98185,
+    "min": 0.9817,
+    "max": 0.982
+   },
+   "fpga_apuf|measured|5000|mlp": {
+    "mean": 0.97375,
+    "min": 0.9719,
+    "max": 0.9756
+   },
+   "fpga_apuf|measured|5000|lr_xor": {
+    "mean": 0.9816,
+    "min": 0.9815,
+    "max": 0.9817
+   },
+   "fpga_apuf|masked|1000|lr": {
+    "mean": 0.49955000000000005,
+    "min": 0.4975,
+    "max": 0.5016
+   },
+   "fpga_apuf|masked|1000|mlp": {
+    "mean": 0.49595,
+    "min": 0.4917,
+    "max": 0.5002
+   },
+   "fpga_apuf|masked|1000|lr_xor": {
+    "mean": 0.5001,
+    "min": 0.4968,
+    "max": 0.5034
+   },
+   "fpga_apuf|masked|5000|lr": {
+    "mean": 0.49895,
+    "min": 0.4927,
+    "max": 0.5052
+   },
+   "fpga_apuf|masked|5000|mlp": {
+    "mean": 0.49225,
+    "min": 0.4922,
+    "max": 0.4923
+   },
+   "fpga_apuf|masked|5000|lr_xor": {
+    "mean": 0.49785,
+    "min": 0.4947,
+    "max": 0.501
+   },
+   "fpga_apuf|oracle|1000|lr_xor": {
+    "mean": 0.9537,
+    "min": 0.953,
+    "max": 0.9544
+   },
+   "fpga_apuf|oracle|5000|lr_xor": {
+    "mean": 0.98175,
+    "min": 0.9816,
+    "max": 0.9819
+   },
+   "fpga_xor4|measured|5000|lr": {
+    "mean": 0.5094000000000001,
+    "min": 0.5082,
+    "max": 0.5106
+   },
+   "fpga_xor4|measured|5000|mlp": {
+    "mean": 0.5141,
+    "min": 0.5016,
+    "max": 0.5266
+   },
+   "fpga_xor4|measured|5000|lr_xor": {
+    "mean": 0.4988,
+    "min": 0.4935,
+    "max": 0.5041
+   },
+   "fpga_xor4|measured|20000|lr": {
+    "mean": 0.50305,
+    "min": 0.4955,
+    "max": 0.5106
+   },
+   "fpga_xor4|measured|20000|mlp": {
+    "mean": 0.52825,
+    "min": 0.507,
+    "max": 0.5495
+   },
+   "fpga_xor4|measured|20000|lr_xor": {
+    "mean": 0.861,
+    "min": 0.844,
+    "max": 0.878
+   },
+   "fpga_xor4|masked|5000|lr": {
+    "mean": 0.49645,
+    "min": 0.4949,
+    "max": 0.498
+   },
+   "fpga_xor4|masked|5000|mlp": {
+    "mean": 0.49844999999999995,
+    "min": 0.4967,
+    "max": 0.5002
+   },
+   "fpga_xor4|masked|5000|lr_xor": {
+    "mean": 0.49634999999999996,
+    "min": 0.4942,
+    "max": 0.4985
+   },
+   "fpga_xor4|masked|20000|lr": {
+    "mean": 0.49805,
+    "min": 0.494,
+    "max": 0.5021
+   },
+   "fpga_xor4|masked|20000|mlp": {
+    "mean": 0.49815,
+    "min": 0.4964,
+    "max": 0.4999
+   },
+   "fpga_xor4|masked|20000|lr_xor": {
+    "mean": 0.50145,
+    "min": 0.498,
+    "max": 0.5049
+   },
+   "fpga_xor4|oracle|5000|lr_xor": {
+    "mean": 0.5054000000000001,
+    "min": 0.5051,
+    "max": 0.5057
+   },
+   "fpga_xor4|oracle|20000|lr_xor": {
+    "mean": 0.8683,
+    "min": 0.8644,
+    "max": 0.8722
+   }
+  }
+ }
+}

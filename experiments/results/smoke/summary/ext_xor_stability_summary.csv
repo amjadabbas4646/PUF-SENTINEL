@@ -1,0 +1,3 @@
+k,budget,queries,devices,unstable_fraction,mask_cancels_all,agreement_mean,agreement_min,agreement_max,agreement_lo,agreement_hi,devices_above_95,min_cosine,no_key_mean,no_key_lo,no_key_hi,no_key_min,no_key_max,no_key_tost_p,with_key_mean,with_key_min,epochs_median,seconds_median,per_device_agreement
+1,2000,10000,2,0.09825,True,0.982,0.982,0.982,0.982,0.982,2,0.998529,0.487,0.20746349579849405,0.766536504201506,0.465,0.509,0.5431398112134741,0.982,0.982,923.5,4.28,"[0.982, 0.982]"
+2,2000,10000,2,0.18525,True,0.5800000000000001,0.545,0.615,0.13528283422487708,1.024717165775123,0,0.298663,0.5065,0.4239096692131913,0.5890903307868086,0.5,0.513,0.3427735790777403,0.535,0.455,425.0,2.23,"[0.615, 0.545]"

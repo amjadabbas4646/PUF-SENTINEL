@@ -1,0 +1,5 @@
+k,device,budget,repeats,queries,noisiness,unstable_fraction,mask_cancels,model_agreement_sign_free,min_matched_cosine,masked_response_acc_no_key,masked_response_acc_with_key,sign_crps,val_loss,epochs,restarts,seconds
+1,0,2000,5,10000,0.1,0.132,True,0.982,0.998529,0.509,0.982,20,0.134927,687,8,3.44
+1,1,2000,5,10000,0.1,0.0645,True,0.982,0.998906,0.465,0.982,20,0.091679,1160,8,5.12
+2,0,2000,5,10000,0.1,0.207,True,0.615,0.601036,0.513,0.615,20,0.449198,442,8,2.32
+2,1,2000,5,10000,0.1,0.1635,True,0.545,0.298663,0.5,0.455,20,0.49209,408,8,2.14

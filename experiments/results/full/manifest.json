@@ -1,0 +1,362 @@
+{
+ "stages": {
+  "attack": {
+   "seconds": 503.3,
+   "finished_utc": "2026-10-10T20:36:05Z",
+   "files": {
+    "attack_raw.csv": "46e60edd055be617b87020f05e5b9be6604966b85e23a77141ecc2f4a8ebfc14"
+   }
+  },
+  "legacy": {
+   "seconds": 11.6,
+   "finished_utc": "2026-10-10T20:36:16Z",
+   "files": {
+    "legacy_raw.csv": "985e4fce4ca96157af4108bc8adc28a7fa46797c1bdf06fd77270ea0d81e3924"
+   }
+  },
+  "xor_scaling": {
+   "seconds": 83.8,
+   "finished_utc": "2026-10-10T20:37:40Z",
+   "files": {
+    "xor_scaling_raw.csv": "425f8838c1be7939dcc191e5e0ef6fcf3a692528373dd7ffc7e1edcdedcd8623"
+   }
+  },
+  "reliability": {
+   "seconds": 28.2,
+   "finished_utc": "2026-10-10T20:38:08Z",
+   "files": {
+    "reliability_raw.csv": "7d1784195cc6f4b0dd12a77b1ba2e7d6eca5352c5dcede09a499bed70c831f0e"
+   }
+  },
+  "quality": {
+   "seconds": 18.0,
+   "finished_utc": "2026-10-10T20:38:26Z",
+   "files": {
+    "quality_summary.json": "ee1eccc145f90631eba140740a76fe7f8457501fec560dc1a55cca75398e19d1",
+    "quality_per_device.csv": "0c50e455e998d9b54b21798f7055386e0dfe039e700d4f3e56f545b8d492466d"
+   }
+  },
+  "ecc": {
+   "seconds": 98.2,
+   "finished_utc": "2026-10-10T20:40:04Z",
+   "files": {
+    "ecc_raw.csv": "00cb403e4f5f444e786faf30391f08fc62ac25193e9efbf8250e8a73d2da6790",
+    "ecc_analytic.csv": "e5172775307e6d2b0f07655b36351044f87ef077e62b9344116446ae8ab45e06",
+    "ecc_design.json": "50cea3afaa4607b65ae2407b3b27f0722b37ba93b7f41b49ac4a750673d2b1fb"
+   }
+  },
+  "overhead": {
+   "seconds": 3.0,
+   "finished_utc": "2026-10-10T20:40:08Z",
+   "files": {
+    "overhead.json": "0905cc7061c699f826e7c216b4f778229af861e933cca360e5d5f98dd8cee71d"
+   }
+  },
+  "stability_models": {
+   "seconds": 321.1,
+   "finished_utc": "2026-10-10T21:33:53Z",
+   "files": {
+    "stability_models_raw.csv": "237a1b98dd29df0e982aa12e7823420c39a2daaf7414cc5ea314da176309ec4b"
+   }
+  },
+  "prodlr_restarts": {
+   "seconds": 43.1,
+   "finished_utc": "2026-10-10T21:34:36Z",
+   "files": {
+    "prodlr_restarts_raw.csv": "50aaf269376a05ac0beb1080ff2b11863117a8d5c1a71bbfbade2cd3fc14125a"
+   }
+  }
+ },
+ "master_seed": 20261011,
+ "config_file": "configs/full.json",
+ "config": {
+  "profile": "full",
+  "n_stages": 64,
+  "attack": {
+   "constructions": [
+    "apuf",
+    "xor2",
+    "mask_only",
+    "mask_apuf",
+    "mask_xor2"
+   ],
+   "devices": 10,
+   "budgets": [
+    100,
+    300,
+    1000,
+    3000,
+    10000,
+    30000
+   ],
+   "n_test": 10000,
+   "val_fraction": 0.2,
+   "conditions": [
+    {
+     "dist": "uniform",
+     "noisiness": 0.0
+    },
+    {
+     "dist": "markov",
+     "noisiness": 0.0
+    },
+    {
+     "dist": "uniform",
+     "noisiness": 0.1
+    }
+   ],
+   "markov_rho": 0.7,
+   "attacks": [
+    "lr",
+    "svm",
+    "rf",
+    "gb",
+    "mlp",
+    "lr_xor"
+   ],
+   "equivalence_margin": 0.01
+  },
+  "legacy_pbkdf2": {
+   "devices": 3,
+   "budgets": [
+    1000,
+    10000
+   ],
+   "n_test": 2000,
+   "attacks": [
+    "lr",
+    "svm",
+    "rf",
+    "gb",
+    "mlp",
+    "lr_xor"
+   ]
+  },
+  "xor_scaling": {
+   "k": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "devices": 5,
+   "budgets": [
+    10000,
+    100000
+   ],
+   "n_test": 10000,
+   "attacks": [
+    "mlp",
+    "lr_xor"
+   ]
+  },
+  "reliability_attack": {
+   "devices": 10,
+   "budgets": [
+    1000,
+    3000,
+    10000,
+    30000
+   ],
+   "n_test": 10000,
+   "noisiness": 0.1,
+   "repeats": 11
+  },
+  "quality": {
+   "constructions": [
+    "apuf",
+    "xor2",
+    "mask_only",
+    "mask_apuf",
+    "mask_xor2"
+   ],
+   "devices": 20,
+   "n_challenges": 40960,
+   "flip_challenges": 2000,
+   "nist_sequence_bits": 4096,
+   "noisiness_for_reliability": 0.1,
+   "bootstrap": 2000
+  },
+  "ecc": {
+   "codes": [
+    {
+     "name": "BCH(127,78,7) x2",
+     "family": "BCH",
+     "n": 127,
+     "k": 78,
+     "t": 7,
+     "bits_per_symbol": 1,
+     "blocks": 2
+    },
+    {
+     "name": "BCH(127,64,10) x2",
+     "family": "BCH",
+     "n": 127,
+     "k": 64,
+     "t": 10,
+     "bits_per_symbol": 1,
+     "blocks": 2
+    },
+    {
+     "name": "BCH(127,36,15) x4",
+     "family": "BCH",
+     "n": 127,
+     "k": 36,
+     "t": 15,
+     "bits_per_symbol": 1,
+     "blocks": 4
+    },
+    {
+     "name": "RS(24,16,4)",
+     "family": "RS",
+     "n": 24,
+     "k": 16,
+     "t": 4,
+     "bits_per_symbol": 8,
+     "blocks": 1
+    },
+    {
+     "name": "RS(32,16,8)",
+     "family": "RS",
+     "n": 32,
+     "k": 16,
+     "t": 8,
+     "bits_per_symbol": 8,
+     "blocks": 1
+    },
+    {
+     "name": "RS(48,16,16)",
+     "family": "RS",
+     "n": 48,
+     "k": 16,
+     "t": 16,
+     "bits_per_symbol": 8,
+     "blocks": 1
+    }
+   ],
+   "bers": [
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.08,
+    0.1,
+    0.15,
+    0.2
+   ],
+   "models": [
+    "iid",
+    "heterogeneous",
+    "common_mode"
+   ],
+   "rho_common_mode": 0.05,
+   "decoder_trials": 2000,
+   "weight_trials": 200000,
+   "analytic_grid": [
+    0.002,
+    0.25,
+    125
+   ]
+  },
+  "overhead": {
+   "hmac_challenges": 20000,
+   "pbkdf2_challenges": 1000,
+   "decoder_repeats": 200,
+   "timing_repeats": 5
+  },
+  "stability_models": {
+   "devices": 10,
+   "noisiness": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+   ],
+   "repeats": [
+    3,
+    5,
+    11,
+    21
+   ],
+   "grid_budget": 10000,
+   "n_test": 10000,
+   "models": [
+    "logistic",
+    "exact_cold",
+    "exact_warm"
+   ],
+   "baseline": {
+    "noisiness": 0.1,
+    "repeats": 11,
+    "budgets": [
+     1000,
+     3000,
+     10000,
+     30000
+    ]
+   }
+  },
+  "prodlr_restarts": {
+   "k": 4,
+   "devices": 5,
+   "budget": 100000,
+   "restarts": 20
+  }
+ },
+ "attack_config": {
+  "lr": {
+   "C": 10.0,
+   "max_iter": 2000
+  },
+  "svm": {
+   "C": 1.0,
+   "max_iter": 5000
+  },
+  "rf": {
+   "n_estimators": 100
+  },
+  "gb": {
+   "max_iter": 200,
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 31
+  },
+  "mlp": {
+   "hidden": [
+    64,
+    64,
+    64
+   ],
+   "lr": 0.003,
+   "batch": 256,
+   "max_epochs": 150,
+   "patience": 12
+  },
+  "lr_xor": {
+   "lr": 0.02,
+   "batch": 256,
+   "max_epochs": 100,
+   "patience": 10,
+   "restarts": 5
+  }
+ },
+ "reliability_config": {
+  "repeats": 11,
+  "lr": 0.02,
+  "batch": 256,
+  "max_epochs": 150,
+  "patience": 15,
+  "restarts": 5,
+  "val_fraction": 0.2
+ },
+ "versions": {
+  "python": "3.12.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "scikit-learn": "1.6.1",
+  "torch": "2.7.1+cpu",
+  "joblib": "1.5.1",
+  "cpu_count": 16
+ },
+ "jobs": 14
+}

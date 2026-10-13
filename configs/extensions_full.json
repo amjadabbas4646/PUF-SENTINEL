@@ -1,0 +1,46 @@
+{
+  "profile": "full",
+  "base_config": "configs/full.json",
+  "classes": {
+    "kinds": ["X", "L", "P", "H"],
+    "devices": 10,
+    "budgets": [3000, 30000],
+    "base_k": 2,
+    "hash_bits": 8,
+    "attacks": ["lr", "svm", "rf", "gb", "mlp", "lr_xor"]
+  },
+  "class_stability": {
+    "kinds": ["X", "L", "P", "H"],
+    "devices": 10,
+    "budget": 10000,
+    "n_test": 10000,
+    "noisiness": 0.1,
+    "repeats": 11,
+    "hash_bits": 8
+  },
+  "xor_stability": {
+    "k": [1, 2, 3, 4],
+    "devices": 10,
+    "budgets": [3000, 10000, 30000],
+    "n_test": 10000,
+    "noisiness": 0.1,
+    "repeats": 11,
+    "sign_crps": 20
+  },
+  "convergence": {
+    "constructions": ["apuf", "xor2", "mask_xor2"],
+    "devices": 10,
+    "attacks": ["lr", "svm", "rf", "gb", "mlp", "lr_xor"]
+  },
+  "entropy": {
+    "bias_p": [0.5, 0.48, 0.45, 0.42, 0.4, 0.35, 0.3]
+  },
+  "fpga": {
+    "top": "AM21_top.npz",
+    "chains": ["AM21_b0.npz", "AM21_b1.npz", "AM21_b2.npz", "AM21_b3.npz", "AM21_b4.npz"],
+    "pool": 120000,
+    "n_test": 10000,
+    "budgets": [1000, 10000, 30000],
+    "attacks": ["lr", "svm", "rf", "gb", "mlp", "lr_xor"]
+  }
+}

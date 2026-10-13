@@ -1,0 +1,45 @@
+{
+ "nist_frequency_original_pass_fraction_on_ideal_bits": 0.9933244325767691,
+ "nist_frequency_correct_pass_fraction_on_ideal_bits": 0.9933244325767691,
+ "nist_frequency_stored_values_in_original_results": {
+  "ArbiterPUF": 0.5447,
+  "SRAMPUF": 0.502,
+  "HybridPUF": 0.5073
+ },
+ "nist_frequency_note": "the shipped function passes about 99 percent of ideal 1024-bit blocks, as the specification predicts, but the stored results file reports about 50 percent for all three primitives; the stored numbers are therefore not reproduced by the shipped code, and the manuscript text 'all primitives pass' contradicts the table it cites",
+ "uniqueness_original_on_ideal_devices": 0.49270833333333336,
+ "uniqueness_original_sd_of_45_pairs": 0.06524511258254591,
+ "uniqueness_original_note": "each device is reduced to one 64-bit word (per-bit majority over 2000 challenges) before distances are taken, so the estimate rests on 64 bits per device and, for a balanced response, the majority word is a coin flip per bit",
+ "dpa_cv_ideal_bits": 0.00012765589284601824,
+ "dpa_cv_bits_with_90_percent_ones": 0.025800092673068698,
+ "rs_original_codeword_symbols": {
+  "8": 16,
+  "12": 20,
+  "16": 24
+ },
+ "rs_original_correctable_symbols": {
+  "8": 4,
+  "12": 6,
+  "16": 8
+ },
+ "rs_original_response_bits_needed_for_code_offset": {
+  "8": 128,
+  "12": 160,
+  "16": 192
+ },
+ "bch_127_true_dimensions": {
+  "t=7": 78,
+  "t=10": 64,
+  "t=15": 36
+ },
+ "bch_original_parity_bits_formula": {
+  "t=7": 49,
+  "t=15": 105
+ },
+ "bch_true_parity_bits": {
+  "t=7": 49,
+  "t=15": 91
+ },
+ "pbkdf2_hmac_calls_per_mask": 1000,
+ "pbkdf2_salt_is_challenge": true
+}

@@ -1,0 +1,13 @@
+section,construction,device,dist,noisiness,budget,n_train,n_val,n_test,attack,val_acc,test_acc,test_acc_ideal,seconds
+xor_scaling,apuf,0,uniform,0.0,5000,4000,1000,2000,mlp,0.989,0.9855,0.9855,0.931
+xor_scaling,apuf,0,uniform,0.0,5000,4000,1000,2000,lr_xor,0.993,0.9895,0.9895,0.666
+xor_scaling,apuf,1,uniform,0.0,5000,4000,1000,2000,mlp,0.992,0.989,0.989,0.863
+xor_scaling,apuf,1,uniform,0.0,5000,4000,1000,2000,lr_xor,0.99,0.9895,0.9895,0.665
+xor_scaling,xor2,0,uniform,0.0,5000,4000,1000,2000,mlp,0.967,0.9615,0.9615,0.721
+xor_scaling,xor2,0,uniform,0.0,5000,4000,1000,2000,lr_xor,0.993,0.9855,0.9855,0.607
+xor_scaling,xor2,1,uniform,0.0,5000,4000,1000,2000,mlp,0.967,0.9595,0.9595,0.697
+xor_scaling,xor2,1,uniform,0.0,5000,4000,1000,2000,lr_xor,0.984,0.9835,0.9835,0.596
+xor_scaling,xor3,0,uniform,0.0,5000,4000,1000,2000,mlp,0.906,0.9145,0.9145,0.721
+xor_scaling,xor3,0,uniform,0.0,5000,4000,1000,2000,lr_xor,0.971,0.9635,0.9635,1.25
+xor_scaling,xor3,1,uniform,0.0,5000,4000,1000,2000,mlp,0.946,0.948,0.948,0.74
+xor_scaling,xor3,1,uniform,0.0,5000,4000,1000,2000,lr_xor,0.961,0.97,0.97,0.929

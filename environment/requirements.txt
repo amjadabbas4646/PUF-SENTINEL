@@ -1,0 +1,8 @@
+# Pinned environment used for every result in this project (Python 3.12).
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.6.1
+torch==2.7.1
+matplotlib==3.10.3
+joblib==1.5.1
+pytest==8.4.1

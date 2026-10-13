@@ -1,0 +1,452 @@
+{
+ "checks": [
+  {
+   "check": "BCH t=7, field 0x89: dimension 78",
+   "passed": true,
+   "detail": "deg g = 49"
+  },
+  {
+   "check": "BCH t=7, field 0x89: alpha^1..alpha^14 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7, field 0x89: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7, field 0x89: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 19"
+  },
+  {
+   "check": "BCH t=10, field 0x89: dimension 64",
+   "passed": true,
+   "detail": "deg g = 63"
+  },
+  {
+   "check": "BCH t=10, field 0x89: alpha^1..alpha^20 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10, field 0x89: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10, field 0x89: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 29"
+  },
+  {
+   "check": "BCH t=15, field 0x89: dimension 36",
+   "passed": true,
+   "detail": "deg g = 91"
+  },
+  {
+   "check": "BCH t=15, field 0x89: alpha^1..alpha^30 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15, field 0x89: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15, field 0x89: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 51"
+  },
+  {
+   "check": "BCH t=7, field 0x83: dimension 78",
+   "passed": true,
+   "detail": "deg g = 49"
+  },
+  {
+   "check": "BCH t=7, field 0x83: alpha^1..alpha^14 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7, field 0x83: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7, field 0x83: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 25"
+  },
+  {
+   "check": "BCH t=10, field 0x83: dimension 64",
+   "passed": true,
+   "detail": "deg g = 63"
+  },
+  {
+   "check": "BCH t=10, field 0x83: alpha^1..alpha^20 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10, field 0x83: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10, field 0x83: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 29"
+  },
+  {
+   "check": "BCH t=15, field 0x83: dimension 36",
+   "passed": true,
+   "detail": "deg g = 91"
+  },
+  {
+   "check": "BCH t=15, field 0x83: alpha^1..alpha^30 are roots of g",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15, field 0x83: g divides x^127 + 1",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15, field 0x83: weight of g at least 2t + 1",
+   "passed": true,
+   "detail": "weight 51"
+  },
+  {
+   "check": "RS(24,16): generator has roots alpha^1..alpha^8, degree 8",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(24,16): t = floor((n-k)/2) = 4, minimum distance 9",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(32,16): generator has roots alpha^1..alpha^16, degree 16",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(32,16): t = floor((n-k)/2) = 8, minimum distance 17",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(48,16): generator has roots alpha^1..alpha^32, degree 32",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(48,16): t = floor((n-k)/2) = 16, minimum distance 33",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "exact arithmetic: BCH(127,36,15) x4 fails with probability <= 1e-6 at BER 2.61 %",
+   "passed": true,
+   "detail": "9.724e-07"
+  },
+  {
+   "check": "exact arithmetic: and above 1e-6 at BER 2.62 %, the value printed in the first revision",
+   "passed": true,
+   "detail": "1.023e-06"
+  },
+  {
+   "check": "project BCH t=7: generator equals the independent one (field 0x89)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "project BCH t=10: generator equals the independent one (field 0x89)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "project BCH t=15: generator equals the independent one (field 0x89)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "project RS(24,16): generator equals the independent one",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "project RS(32,16): generator equals the independent one",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "project RS(48,16): generator equals the independent one",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "stored design threshold of BCH(127,78,7) x2 equals the exact one",
+   "passed": true,
+   "detail": "stored 0.5334 %, exact 0.5334 %"
+  },
+  {
+   "check": "stored design threshold of BCH(127,64,10) x2 equals the exact one",
+   "passed": true,
+   "detail": "stored 1.2101 %, exact 1.2101 %"
+  },
+  {
+   "check": "stored design threshold of BCH(127,36,15) x4 equals the exact one",
+   "passed": true,
+   "detail": "stored 2.6155 %, exact 2.6155 %"
+  },
+  {
+   "check": "stored design threshold of RS(24,16,4) equals the exact one",
+   "passed": true,
+   "detail": "stored 0.0962 %, exact 0.0962 %"
+  },
+  {
+   "check": "stored design threshold of RS(32,16,8) equals the exact one",
+   "passed": true,
+   "detail": "stored 0.4411 %, exact 0.4411 %"
+  },
+  {
+   "check": "stored design threshold of RS(48,16,16) equals the exact one",
+   "passed": true,
+   "detail": "stored 1.2421 %, exact 1.2421 %"
+  },
+  {
+   "check": "floating-point failure formula agrees with exact arithmetic (relative error < 1e-6)",
+   "passed": true,
+   "detail": "largest relative error 1.23e-14"
+  },
+  {
+   "check": "BCH t=7: all 8128 patterns of weight 1 and 2 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7: 60 random patterns of every weight 0..7 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=7: none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "BCH t=10: all 8128 patterns of weight 1 and 2 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10: 60 random patterns of every weight 0..10 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=10: none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "BCH t=15: all 8128 patterns of weight 1 and 2 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15: 60 random patterns of every weight 0..15 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "BCH t=15: none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "RS(24,16): 60 random patterns of every weight 0..4 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(24,16): none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "RS(32,16): 60 random patterns of every weight 0..8 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(32,16): none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "RS(48,16): 60 random patterns of every weight 0..16 corrected",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "check": "RS(48,16): none of 2000 patterns beyond t decoded to the sent codeword",
+   "passed": true,
+   "detail": "detected 2000, miscorrected to another codeword 0"
+  },
+  {
+   "check": "zero observed failures in 200000 patterns bound the failure probability only to 1.5e-5",
+   "passed": true,
+   "detail": "upper 95 % bound 1.498e-05; 9 such points"
+  }
+ ],
+ "bch": {
+  "t7_0x89": {
+   "k": 78,
+   "deg_g": 49,
+   "g_hex": "0x2c98011d8b04d",
+   "weight_g": 19
+  },
+  "t10_0x89": {
+   "k": 64,
+   "deg_g": 63,
+   "g_hex": "0xa1ab815bc7ec8025",
+   "weight_g": 29
+  },
+  "t15_0x89": {
+   "k": 36,
+   "deg_g": 91,
+   "g_hex": "0xccc3cdb5487a24fa5f3a3dd",
+   "weight_g": 51
+  },
+  "t7_0x83": {
+   "k": 78,
+   "deg_g": 49,
+   "g_hex": "0x292c316eea273",
+   "weight_g": 25
+  },
+  "t10_0x83": {
+   "k": 64,
+   "deg_g": 63,
+   "g_hex": "0xf4845518b9582a1f",
+   "weight_g": 29
+  },
+  "t15_0x83": {
+   "k": 36,
+   "deg_g": 91,
+   "g_hex": "0xd5306d6bfdbc8574719e70d",
+   "weight_g": 51
+  }
+ },
+ "threshold_ber_for_1e-6_exact": {
+  "BCH(127,78,7) x2": 0.005334095167654596,
+  "BCH(127,64,10) x2": 0.01210096858903853,
+  "BCH(127,36,15) x4": 0.026155271963489213,
+  "RS(24,16,4)": 0.0009621721060284472,
+  "RS(32,16,8)": 0.00441086566706872,
+  "RS(48,16,16)": 0.012421014352185011
+ },
+ "bch_127_36_15_x4": {
+  "failure_at_2.61_percent": 9.723933739510812e-07,
+  "failure_at_2.62_percent": 1.022859364884242e-06,
+  "threshold_percent": 2.6155271963489213
+ },
+ "decoder_beyond_radius": {
+  "BCH_t7": {
+   "detected": 2000,
+   "miscorrected": 0
+  },
+  "BCH_t10": {
+   "detected": 2000,
+   "miscorrected": 0
+  },
+  "BCH_t15": {
+   "detected": 2000,
+   "miscorrected": 0
+  },
+  "RS_24_16": {
+   "detected": 2000,
+   "miscorrected": 0
+  },
+  "RS_32_16": {
+   "detected": 2000,
+   "miscorrected": 0
+  },
+  "RS_48_16": {
+   "detected": 2000,
+   "miscorrected": 0
+  }
+ },
+ "zero_failure_points": [
+  {
+   "code": "BCH(127,64,10) x2",
+   "model": "iid",
+   "ber": 0.01,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,64,10) x2",
+   "model": "heterogeneous",
+   "ber": 0.01,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "iid",
+   "ber": 0.01,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "iid",
+   "ber": 0.02,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "iid",
+   "ber": 0.03,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "heterogeneous",
+   "ber": 0.01,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "heterogeneous",
+   "ber": 0.02,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "BCH(127,36,15) x4",
+   "model": "heterogeneous",
+   "ber": 0.03,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  },
+  {
+   "code": "RS(48,16,16)",
+   "model": "heterogeneous",
+   "ber": 0.01,
+   "trials": 200000,
+   "upper_95": 1.4978549188193746e-05
+  }
+ ],
+ "passed": true
+}

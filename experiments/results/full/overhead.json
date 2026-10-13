@@ -1,0 +1,62 @@
+{
+ "note": "host timings of the Python reference code, not embedded measurements",
+ "hmac_mask_us_per_challenge": {
+  "min": 3.0697899986989796,
+  "median": 3.1486749998293817
+ },
+ "pbkdf2_mask_us_per_challenge": {
+  "min": 440.0496000889689,
+  "median": 443.53069993667305
+ },
+ "pbkdf2_over_hmac_ratio": 140.86264856192105,
+ "hmac_invocations_per_mask": {
+  "hmac": 1,
+  "pbkdf2_1000": 1000
+ },
+ "sha256_compressions_per_mask": {
+  "hmac": "4 (two for the padded key blocks, one for the 49-byte message, one outer)",
+  "pbkdf2_1000": "about 2002 with precomputed key pads (2 per iteration)"
+ },
+ "mask_storage_bits": {
+  "device_key": 256,
+  "device_id": 128
+ },
+ "codes": {
+  "BCH(127,78,7) x2": {
+   "helper_bits": 254,
+   "puf_bits": 254,
+   "secret_bits": 156,
+   "rep_ms_median": 0.2272999845445156
+  },
+  "BCH(127,64,10) x2": {
+   "helper_bits": 254,
+   "puf_bits": 254,
+   "secret_bits": 128,
+   "rep_ms_median": 0.2941500279121101
+  },
+  "BCH(127,36,15) x4": {
+   "helper_bits": 508,
+   "puf_bits": 508,
+   "secret_bits": 144,
+   "rep_ms_median": 0.45864999992772937
+  },
+  "RS(24,16,4)": {
+   "helper_bits": 192,
+   "puf_bits": 192,
+   "secret_bits": 128,
+   "rep_ms_median": 0.11680007446557283
+  },
+  "RS(32,16,8)": {
+   "helper_bits": 256,
+   "puf_bits": 256,
+   "secret_bits": 128,
+   "rep_ms_median": 0.29030005680397153
+  },
+  "RS(48,16,16)": {
+   "helper_bits": 384,
+   "puf_bits": 384,
+   "secret_bits": 128,
+   "rep_ms_median": 0.8579499553889036
+  }
+ }
+}
