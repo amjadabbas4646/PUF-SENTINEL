@@ -240,9 +240,15 @@ def check_layout(fig, name):
                 if hit.any():
                     problems.append("a plotted line runs through a legend")
     problems = sorted(set(problems))
-    if problems:
+    if problems and FONT in ("Times New Roman", "Liberation Serif"):
         raise SystemExit(f"layout check failed for {name}:\n  " + "\n  ".join(problems))
     w_in, h_in = fig.get_size_inches()
+    if problems:
+        # a substitute font of other width (for example DejaVu Serif on a bare
+        # Linux system) can push a label past the edge; the figure is still
+        # written as a preview, the article figures use Times New Roman
+        return (f"{name}: written with {FONT}, layout differs from the article figure "
+                f"(install Times New Roman or Liberation Serif): " + "; ".join(problems))
     return f"{name}: {w_in:.2f} x {h_in:.2f} in, {len(texts)} texts, layout check passed"
 
 
